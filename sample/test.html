@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test server</title>
+</head>
+<body>
+	<h1>This is a server test program!</h1>
+	<img src="" alt="">
+	<form action="/search" method="POST">
+    <input type="text" name="username" placeholder="请输入用户名">
+    <input type="text" name="password" placeholder="请输入密码">
+    <input type="submit" value="search">
+  </form>
+  <script>
+  	var xhr = new XMLHttpRequest()
+  	xhr.open('GET', '/a?city=hangzhou', true)
+		xhr.send()
+		xhr.onload = function(){
+		  console.log(JSON.parse(xhr.responseText))
+		}
+
+  </script>
+</body>
+</html>
